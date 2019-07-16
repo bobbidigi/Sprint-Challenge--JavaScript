@@ -80,7 +80,7 @@ let unis = graduates.map(function(grad){
 })
 
 // const universities = [];
-console.log(unis.sort());
+// console.log(unis.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -94,14 +94,16 @@ const contactInfo = graduates.map(function(grad){
   return `${grad.first_name} ${grad.email}`;
 })
 
-console.log(contactInfo);
+// console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-const uni = graduates.filter((grad) => grad.university === "Uni");
+const uni = unis.filter(function(grad){
+ return grad.includes("Uni")
+});
 
-console.log(uni);
+console.log(uni, "uni");
 
 
 // ==== ADVANCED Array Methods ====
